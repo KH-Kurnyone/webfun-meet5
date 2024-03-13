@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TailwindCSS - Membuat Form Tiket</title>
+    <link href="src/output.css" rel="stylesheet" />
+    <!-- Nama   : Khikmal Kurniawan -->
+    <!-- Kelas  : MI23B -->
+    <!-- Prodi  : Manajemen Informatika -->
+    <style>
+      .bg-ticket {
+        background-image: url('src/img/bg-ticket.png');
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+      .bg-rotate {
+        rotate: 90deg;
+        width: 180px;
+        margin-top: 70px;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-600 m-12">
+    <!-- Form Input Data Tiket -->
+    <section id="form_input_data_tiket">
+      <!-- Header Tiket -->
+      <div class="bg-orange-500 text-white p-6 rounded-t-xl text-xl font-bold">
+        <div class="flex justify-between">
+          <p>FORM DATA TIKET</p>
+          <img src="src/img/plane-white.png" alt="logo-pesawat" width="55px" />
+        </div>
+      </div>
+      <!-- Body Tiket -->
+      <div class="bg-white p-3 rounded-b-xl">
+        <form class="w-full mx-auto">
+          <!-- Form Input Baris 1 -->
+          <div class="lg:flex md:flex gap-5">
+            <div class="lg:w-full md:w-full mb-5">
+              <label for="flight" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Flight<span class="text-red-600">*</span></label>
+              <input type="text" id="flight" placeholder="Flight Here...." class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required autocomplete="off" />
+            </div>
+            <div class="lg:w-full md:w-full mb-5">
+              <label for="from" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">From<span class="text-red-600">*</span></label>
+              <input type="text" id="From" placeholder="Location From Here...." class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required autocomplete="off" />
+            </div>
+            <div class="lg:w-full md:w-full mb-5">
+              <label for="to" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">To<span class="text-red-600">*</span></label>
+              <input type="text" placeholder="Location To Here...." id="to" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required autocomplete="off" />
+            </div>
+          </div>
+          <!-- Form Input Baris 2 -->
+          <div class="lg:flex md:flex gap-5">
+            <div class="lg:w-full md:w-full mb-5">
+              <label for="terminal" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Terminal<span class="text-red-600">*</span></label>
+              <input type="text" id="terminal" placeholder="Passenger Here...." class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required autocomplete="off" />
+            </div>
+            <div class="lg:w-full md:w-full mb-5">
+              <label for="passenger" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Passenger<span class="text-red-600">*</span></label>
+              <input type="text" id="passenger" placeholder="Passenger Here...." class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required autocomplete="off" />
+            </div>
+            <div class="lg:w-full md:w-full mb-5">
+              <label for="date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Date<span class="text-red-600">*</span></label>
+              <input type="date" id="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required autocomplete="off" />
+            </div>
+            <div class="lg:w-full md:w-full mb-5">
+              <label for="time" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Boarding Time<span class="text-red-600">*</span></label>
+              <input type="time" id="time" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required autocomplete="off" />
+            </div>
+            <div class="lg:w-full md:w-full mb-5">
+              <label for="seat" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Seat<span class="text-red-600">*</span> </label>
+              <input type="text" id="seat" placeholder="Seat Here...." class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required autocomplete="off" />
+            </div>
+          </div>
+          <!-- Button Submit -->
+          <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+        </form>
+      </div>
+      <!-- End Body Tiket -->
+    </section>
+    <!-- End Form Input Data Tiket -->
+
+    <!-- Form Boarding Pass -->
+    <section id="form_boarding_pass" style="margin-top: 50px">
+      <!-- Header -->
+      <div class="flex">
+        <div class="bg-orange-500 text-white p-3 rounded-t-xl text-xl font-bold w-[900px]">BOARDING PASS</div>
+        <div class="bg-orange-500 text-white p-3 rounded-t-xl text-xl font-bold w-[400px]"></div>
+      </div>
+      <!-- Body -->
+      <div class="bg-ticket p-6">
+        <div class="flex">
+          <!-- Card 1 -->
+          <div class="w-[900px]">
+            <div class="flex">
+              <div class="ms-5 w-full">
+                <p class="text-orange-500 font-bold text-xl">FLIGHT 1245</p>
+                <p>From <span class="font-bold">Tasikmalaya</span> to <span class="font-bold">Bandung</span></p>
+              </div>
+              <div class="w-full">
+                <img src="src/img/barcode 1.png" alt="barcode" />
+              </div>
+            </div>
+            <div class="ms-5">
+              <p class="text-orange-500 font-bold text-xl">TERMINAL 1</p>
+              <p>Gate <span class="font-bold">15</span></p>
+            </div>
+            <div class="flex mt-2 ms-5">
+              <div class="w-full">
+                <p class="text-orange-500 font-bold text-xl">Passenger</p>
+                <p class="font-bold">Lorem, ipsum</p>
+              </div>
+              <div class="w-full">
+                <p class="text-orange-500 font-bold text-xl">Date</p>
+                <p class="font-bold">11 March 2024</p>
+              </div>
+              <div class="w-full">
+                <p class="text-orange-500 font-bold text-xl">Boarding Time</p>
+                <p class="font-bold">12.10</p>
+              </div>
+              <div class="w-full">
+                <p class="text-orange-500 font-bold text-xl">Seat</p>
+                <p class="font-bold">8A</p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="w-[400px]">
+            <div class="flex">
+              <div class="w-full">
+                <img src="src/img/barcode 1.png" class="bg-rotate" alt="Barcode" />
+              </div>
+              <div class="w-full">
+                <p class="text-orange-500 font-bold text-xl">FLIGHT 1245</p>
+                <p>From <span class="font-bold">Tasikmalaya</span> to <span class="font-bold">Bandung</span></p>
+                <p class="text-orange-500 font-bold text-xl">TERMINAL 1</p>
+                <p>Gate <span class="font-bold">15</span></p>
+                <p class="text-orange-500 font-bold text-xl">Passenger</p>
+                <p class="font-bold">Lorem, ipsum</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div class="flex">
+        <div class="bg-orange-500 text-white p-5 rounded-b-xl text-xl font-bold w-[900px]"></div>
+        <div class="bg-orange-500 text-white p-5 rounded-b-xl text-xl font-bold w-[400px]"></div>
+      </div>
+    </section>
+    <!-- End Form Boarding Pass -->
+  </body>
+  <!-- Copyright By Khikmal Kurniawan MI23B -->
+</html>
